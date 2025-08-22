@@ -1,108 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.credits-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 120px; /* slimmer to save space */
-    overflow: hidden;
-    background: rgba(245, 245, 245, 0.95); /* soft light gray */
-    color: #333; /* neutral text */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-top: 1px solid #ddd; /* subtle separator */
-    font-size: 0.9em;
-}
-
-.scroll-content {
-    position: absolute;
-    width: 100%;
-    animation: scroll 40s linear infinite;
-    text-align: center;
-    padding: 10px 20px;
-    line-height: 1.6;
-}
-
-@keyframes scroll {
-    0% { bottom: -100%; }
-    100% { bottom: 100%; }
-}
-
-.credits-container:hover .scroll-content {
-    animation-play-state: paused;
-}
-
-.section-title {
-    font-weight: 600;
-    color: #555; /* softer title color */
-    margin: 10px 0 5px;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.content-item {
-    margin: 4px 0;
-    color: #666; /* softer body text */
-}
-
-.contributor-item, .tool-item {
-    display: inline-block;
-    margin: 3px 6px;
-    padding: 3px 10px;
-    background: #f0f0f0;
-    border-radius: 12px;
-    font-size: 0.85em;
-    color: #444;
-}
-
-.vision-text {
-    color: #444;
-    font-style: italic;
-    margin: 10px 0;
-    line-height: 1.5;
-    padding: 0 20px;
-    font-size: 0.9em;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Dashboard Info</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #222;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .info-box {
+      max-width: 600px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+    }
+    h2 {
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: #111;
+    }
+    h3 {
+      margin-bottom: 4px;
+      font-size: 15px;
+      color: #333;
+    }
+    p {
+      margin: 0 0 10px 0;
+    }
+  </style>
 </head>
 <body>
+  <div class="info-box">
+    <h2>About This Dashboard</h2>
 
-<div class="credits-container">
-    <div class="scroll-content">
-        <div class="section-title">🌱 About This Dashboard</div>
-        
-        <div class="section-title">👥 Contributors</div>
-        <div class="content-item">
-            <span class="contributor-item">Kejal</span>
-            <span class="contributor-item">Sylwia</span>
-            <span class="contributor-item">Sai Deepak</span>
-            <span class="contributor-item">Gaurav</span>
-        </div>
+    <h3>Contributors</h3>
+    <p>Kejal (@rkejal), Sylwia (@spisarcz), Sai Deepak (@saizdeep), Gaurav (@rathiga)</p>
 
-        <div class="section-title">🔧 Tools Used</div>
-        <div class="content-item">
-            <span class="tool-item">Amazon QuickSight</span>
-            <span class="tool-item">GitHub</span>
-            <span class="tool-item">SageMaker</span>
-            <span class="tool-item">Python</span>
-        </div>
-        
-        <div class="section-title">📊 Data Sources</div>
-        <div class="content-item">
-            <span class="tool-item">[Source 1]</span>
-            <span class="tool-item">[Source 2]</span>
-            <span class="tool-item">[Source 3]</span>
-        </div>
-        
-        <div class="section-title">🌍 Vision & Purpose</div>
-        <div class="vision-text">
-            This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:  
-            <b>Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</b>
-        </div>
-    </div>
-</div>
+    <h3>Resources</h3>
+    <p><b>Data Sources:</b> Source 1, Source 2, Source 3</p>
+    <p><b>Tools Used:</b> QuickSight, GitHub, SageMaker, Python</p>
 
+    <h3>Vision & Purpose</h3>
+    <p>Created for <b>VIZCON 2025</b> — A sustainable vision: reducing CO₂ in every last mile.</p>
+  </div>
 </body>
 </html>
