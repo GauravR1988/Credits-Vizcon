@@ -7,94 +7,94 @@
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1c1c1c); /* black metallic look */
-      color: #e0e0e0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2c2c2c);
+      font-family: Arial, sans-serif;
+      color: #e0e0e0;
       overflow: hidden;
     }
 
-    .container {
-      text-align: center;
-      max-width: 700px;
-      padding: 20px;
-      background: rgba(20, 20, 20, 0.7); /* semi-transparent for sleek look */
+    .banner {
+      width: 600px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
       border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0, 255, 128, 0.3);
-      animation: fadeSlide 1.2s ease-out;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 25px rgba(0, 255, 100, 0.5);
     }
 
-    h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #4ef07d;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .scrolling-text {
+      position: absolute;
+      width: 100%;
+      animation: scrollUp 20s linear infinite;
     }
 
-    h3 {
-      margin-top: 20px;
-      margin-bottom: 8px;
-      color: #ffffff;
-      font-size: 18px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
+    @keyframes scrollUp {
+      0%   { top: 100%; }
+      100% { top: -100%; }
+    }
+
+    h2, h3 {
+      text-align: center;
+      margin: 10px 0;
+      color: #6cff96;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin: 5px 0 15px;
+      margin: 0;
+      text-align: center;
     }
 
-    ul li {
-      margin: 6px 0;
-      font-size: 15px;
+    li {
+      margin: 5px 0;
     }
 
     .vision {
-      margin-top: 20px;
+      margin-top: 15px;
       font-style: italic;
-      color: #9effc9;
-      font-size: 16px;
-    }
-
-    /* Animation */
-    @keyframes fadeSlide {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      color: #9ef7c2;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>About This Dashboard</h2>
+  <div class="banner">
+    <div class="scrolling-text">
+      <h2>About This Dashboard</h2>
 
-    <h3>Contributors</h3>
-    <ul>
-      <li>Kejal @rkejal</li>
-      <li>Sylwia @spisarcz</li>
-      <li>Sai Deepak @saizdeep</li>
-      <li>Gaurav @rathiga</li>
-    </ul>
+      <h3>Contributors</h3>
+      <ul>
+        <li>Kejal @rkejal</li>
+        <li>Sylwia @spisarcz</li>
+        <li>Sai Deepak @saizdeep</li>
+        <li>Gaurav @rathiga</li>
+      </ul>
 
-    <h3>Resources</h3>
-    <ul>
-      <li><b>Data Sources:</b> Source 1, Source 2, Source 3</li>
-      <li><b>Tools:</b> QuickSight, GitHub, SageMaker, Python</li>
-    </ul>
+      <h3>Resources</h3>
+      <p><b>Data Sources:</b></p>
+      <ul>
+        <li>Source 1</li>
+        <li>Source 2</li>
+        <li>Source 3</li>
+      </ul>
 
-    <div class="vision">
-      VIZCON 2025 — A sustainable vision: reducing CO₂ in every last mile.
+      <p><b>Tools Used:</b></p>
+      <ul>
+        <li>QuickSight</li>
+        <li>GitHub</li>
+        <li>SageMaker</li>
+        <li>Python</li>
+      </ul>
+
+      <h3 class="vision">
+        Vision & Purpose:<br>
+        VIZCON 2025 – A sustainable vision: reducing CO₂ in every last mile.
+      </h3>
     </div>
   </div>
 </body>
