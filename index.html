@@ -6,21 +6,22 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 140px;
+    height: 120px; /* slimmer to save space */
     overflow: hidden;
-    background: linear-gradient(135deg, #0E3823, #14532D);
-    color: #E8F5E9;
+    background: rgba(245, 245, 245, 0.95); /* soft light gray */
+    color: #333; /* neutral text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.4);
+    border-top: 1px solid #ddd; /* subtle separator */
+    font-size: 0.9em;
 }
 
 .scroll-content {
     position: absolute;
     width: 100%;
-    animation: scroll 35s linear infinite;
+    animation: scroll 40s linear infinite;
     text-align: center;
-    padding: 20px;
-    line-height: 1.8;
+    padding: 10px 20px;
+    line-height: 1.6;
 }
 
 @keyframes scroll {
@@ -33,47 +34,37 @@
 }
 
 .section-title {
-    font-weight: bold;
-    color: #A3FFB3;
-    margin: 15px 0 8px;
-    font-size: 1.3em;
+    font-weight: 600;
+    color: #555; /* softer title color */
+    margin: 10px 0 5px;
+    font-size: 1em;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    text-shadow: 0 0 8px rgba(163,255,179,0.5);
+    letter-spacing: 1px;
 }
 
 .content-item {
-    margin: 6px 0;
-    color: #C8FACC;
-    font-size: 0.95em;
+    margin: 4px 0;
+    color: #666; /* softer body text */
 }
 
 .contributor-item, .tool-item {
     display: inline-block;
-    margin: 6px 10px;
-    padding: 5px 14px;
-    background: rgba(124, 186, 61, 0.25);
-    border-radius: 20px;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
-}
-
-.contributor-item:hover, .tool-item:hover {
-    background: rgba(163, 255, 179, 0.3);
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(163, 255, 179, 0.4);
+    margin: 3px 6px;
+    padding: 3px 10px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    font-size: 0.85em;
+    color: #444;
 }
 
 .vision-text {
-    color: #B2FFB2;
+    color: #444;
     font-style: italic;
-    margin: 18px 0;
-    line-height: 1.9;
-    padding: 0 25px;
-    font-size: 1em;
-    text-shadow: 0 0 10px rgba(178,255,178,0.4);
+    margin: 10px 0;
+    line-height: 1.5;
+    padding: 0 20px;
+    font-size: 0.9em;
 }
-
 </style>
 </head>
 <body>
@@ -107,7 +98,7 @@
         
         <div class="section-title">🌍 Vision & Purpose</div>
         <div class="vision-text">
-            This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:<br>
+            This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:  
             <b>Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</b>
         </div>
     </div>
