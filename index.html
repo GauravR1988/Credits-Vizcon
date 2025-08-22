@@ -6,7 +6,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 160px; /* slightly taller for readability */
+    height: 140px;
     overflow: hidden;
     background: linear-gradient(135deg, #0E3823, #14532D);
     color: #E8F5E9;
@@ -15,21 +15,17 @@
 }
 
 .scroll-content {
-    display: flex;
-    flex-direction: column;
-    animation: scroll 45s linear infinite; /* adjust duration for speed */
-}
-
-.scroll-inner {
-    flex-shrink: 0;
-    padding: 20px;
+    position: absolute;
+    width: 100%;
+    animation: scroll 35s linear infinite;
     text-align: center;
+    padding: 20px;
     line-height: 1.8;
 }
 
 @keyframes scroll {
-    0%   { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
 }
 
 .credits-container:hover .scroll-content {
@@ -77,78 +73,42 @@
     font-size: 1em;
     text-shadow: 0 0 10px rgba(178,255,178,0.4);
 }
+
 </style>
 </head>
 <body>
 
 <div class="credits-container">
     <div class="scroll-content">
-        <!-- First block -->
-        <div class="scroll-inner">
-            <div class="section-title">🌱 About This Dashboard</div>
-            
-            <div class="section-title">👥 Contributors</div>
-            <div class="content-item">
-                <span class="contributor-item">Kejal</span>
-                <span class="contributor-item">Sylwia</span>
-                <span class="contributor-item">Sai Deepak</span>
-                <span class="contributor-item">Gaurav</span>
-            </div>
-
-            <div class="section-title">🔧 Tools Used</div>
-            <div class="content-item">
-                <span class="tool-item">Amazon QuickSight</span>
-                <span class="tool-item">GitHub</span>
-                <span class="tool-item">SageMaker</span>
-                <span class="tool-item">Python</span>
-            </div>
-            
-            <div class="section-title">📊 Data Sources</div>
-            <div class="content-item">
-                <span class="tool-item">[Source 1]</span>
-                <span class="tool-item">[Source 2]</span>
-                <span class="tool-item">[Source 3]</span>
-            </div>
-            
-            <div class="section-title">🌍 Vision & Purpose</div>
-            <div class="vision-text">
-                This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:<br>
-                <b>Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</b>
-            </div>
+        <div class="section-title">🌱 About This Dashboard</div>
+        
+        <div class="section-title">👥 Contributors</div>
+        <div class="content-item">
+            <span class="contributor-item">Kejal</span>
+            <span class="contributor-item">Sylwia</span>
+            <span class="contributor-item">Sai Deepak</span>
+            <span class="contributor-item">Gaurav</span>
         </div>
 
-        <!-- Duplicate block for seamless loop -->
-        <div class="scroll-inner">
-            <div class="section-title">🌱 About This Dashboard</div>
-            
-            <div class="section-title">👥 Contributors</div>
-            <div class="content-item">
-                <span class="contributor-item">Kejal</span>
-                <span class="contributor-item">Sylwia</span>
-                <span class="contributor-item">Sai Deepak</span>
-                <span class="contributor-item">Gaurav</span>
-            </div>
-
-            <div class="section-title">🔧 Tools Used</div>
-            <div class="content-item">
-                <span class="tool-item">Amazon QuickSight</span>
-                <span class="tool-item">GitHub</span>
-                <span class="tool-item">SageMaker</span>
-                <span class="tool-item">Python</span>
-            </div>
-            
-            <div class="section-title">📊 Data Sources</div>
-            <div class="content-item">
-                <span class="tool-item">[Source 1]</span>
-                <span class="tool-item">[Source 2]</span>
-                <span class="tool-item">[Source 3]</span>
-            </div>
-            
-            <div class="section-title">🌍 Vision & Purpose</div>
-            <div class="vision-text">
-                This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:<br>
-                <b>Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</b>
-            </div>
+        <div class="section-title">🔧 Tools Used</div>
+        <div class="content-item">
+            <span class="tool-item">Amazon QuickSight</span>
+            <span class="tool-item">GitHub</span>
+            <span class="tool-item">SageMaker</span>
+            <span class="tool-item">Python</span>
+        </div>
+        
+        <div class="section-title">📊 Data Sources</div>
+        <div class="content-item">
+            <span class="tool-item">[Source 1]</span>
+            <span class="tool-item">[Source 2]</span>
+            <span class="tool-item">[Source 3]</span>
+        </div>
+        
+        <div class="section-title">🌍 Vision & Purpose</div>
+        <div class="vision-text">
+            This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:<br>
+            <b>Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</b>
         </div>
     </div>
 </div>
