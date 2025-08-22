@@ -6,29 +6,26 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 120px;
+    height: 140px;
     overflow: hidden;
-    background: rgba(14, 56, 35, 0.9);
+    background: linear-gradient(135deg, #0E3823, #14532D);
     color: #E8F5E9;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.4);
 }
 
 .scroll-content {
     position: absolute;
     width: 100%;
-    animation: scroll 30s linear infinite;
+    animation: scroll 35s linear infinite;
     text-align: center;
     padding: 20px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 @keyframes scroll {
-    0% {
-        bottom: -100%;
-    }
-    100% {
-        bottom: 100%;
-    }
+    0% { bottom: -100%; }
+    100% { bottom: 100%; }
 }
 
 .credits-container:hover .scroll-content {
@@ -37,41 +34,44 @@
 
 .section-title {
     font-weight: bold;
-    color: #7CBA3D;
-    margin-top: 15px;
-    font-size: 1.2em;
+    color: #A3FFB3;
+    margin: 15px 0 8px;
+    font-size: 1.3em;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 8px rgba(163,255,179,0.5);
 }
 
 .content-item {
-    margin: 5px 0;
-    color: #B4E6AA;
+    margin: 6px 0;
+    color: #C8FACC;
+    font-size: 0.95em;
 }
 
-.contributor-item {
+.contributor-item, .tool-item {
     display: inline-block;
-    margin: 5px 10px;
-    padding: 3px 12px;
-    background: rgba(124, 186, 61, 0.2);
-    border-radius: 15px;
+    margin: 6px 10px;
+    padding: 5px 14px;
+    background: rgba(124, 186, 61, 0.25);
+    border-radius: 20px;
     font-size: 0.9em;
+    transition: all 0.3s ease;
 }
 
-.tool-item {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 3px 12px;
-    background: rgba(124, 186, 61, 0.2);
-    border-radius: 4px;
+.contributor-item:hover, .tool-item:hover {
+    background: rgba(163, 255, 179, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(163, 255, 179, 0.4);
 }
 
 .vision-text {
-    color: #98FF98;
+    color: #B2FFB2;
     font-style: italic;
-    margin: 15px 0;
-    line-height: 1.8;
-    padding: 0 20px;
+    margin: 18px 0;
+    line-height: 1.9;
+    padding: 0 25px;
+    font-size: 1em;
+    text-shadow: 0 0 10px rgba(178,255,178,0.4);
 }
 
 </style>
@@ -84,10 +84,10 @@
         
         <div class="section-title">👥 Contributors</div>
         <div class="content-item">
-            <span class="contributor-item">Kejal </span>
-            <span class="contributor-item">Sylwia </span>
-            <span class="contributor-item">Sai Deepak </span>
-            <span class="contributor-item">Gaurav </span>
+            <span class="contributor-item">Kejal</span>
+            <span class="contributor-item">Sylwia</span>
+            <span class="contributor-item">Sai Deepak</span>
+            <span class="contributor-item">Gaurav</span>
         </div>
 
         <div class="section-title">🔧 Tools Used</div>
@@ -107,8 +107,8 @@
         
         <div class="section-title">🌍 Vision & Purpose</div>
         <div class="vision-text">
-            This dashboard was created for VIZCON 2025 with a sustainable vision:<br>
-            Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.
+            This dashboard was created for <b>VIZCON 2025</b> with a sustainable vision:<br>
+            <b>Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</b>
         </div>
     </div>
 </div>
