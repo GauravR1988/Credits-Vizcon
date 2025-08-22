@@ -2,50 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About This Dashboard</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      color: #222;
-      line-height: 1.6;
-      margin: 20px;
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c); /* black metallic look */
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
     }
-    .info-box {
-      max-width: 600px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background: #fff;
+
+    .container {
+      text-align: center;
+      max-width: 700px;
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.7); /* semi-transparent for sleek look */
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 255, 128, 0.3);
+      animation: fadeSlide 1.2s ease-out;
     }
+
     h2 {
-      margin-bottom: 8px;
-      font-size: 18px;
-      color: #111;
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #4ef07d;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
+
     h3 {
-      margin-bottom: 4px;
-      font-size: 15px;
-      color: #333;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 18px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 5px;
     }
-    p {
-      margin: 0 0 10px 0;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 5px 0 15px;
+    }
+
+    ul li {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+
+    .vision {
+      margin-top: 20px;
+      font-style: italic;
+      color: #9effc9;
+      font-size: 16px;
+    }
+
+    /* Animation */
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="info-box">
+  <div class="container">
     <h2>About This Dashboard</h2>
 
     <h3>Contributors</h3>
-    <p>Kejal (@rkejal), Sylwia (@spisarcz), Sai Deepak (@saizdeep), Gaurav (@rathiga)</p>
+    <ul>
+      <li>Kejal @rkejal</li>
+      <li>Sylwia @spisarcz</li>
+      <li>Sai Deepak @saizdeep</li>
+      <li>Gaurav @rathiga</li>
+    </ul>
 
     <h3>Resources</h3>
-    <p><b>Data Sources:</b> Source 1, Source 2, Source 3</p>
-    <p><b>Tools Used:</b> QuickSight, GitHub, SageMaker, Python</p>
+    <ul>
+      <li><b>Data Sources:</b> Source 1, Source 2, Source 3</li>
+      <li><b>Tools:</b> QuickSight, GitHub, SageMaker, Python</li>
+    </ul>
 
-    <h3>Vision & Purpose</h3>
-    <p>Created for <b>VIZCON 2025</b> — A sustainable vision: reducing CO₂ in every last mile.</p>
+    <div class="vision">
+      VIZCON 2025 — A sustainable vision: reducing CO₂ in every last mile.
+    </div>
   </div>
 </body>
 </html>
