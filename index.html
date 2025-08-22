@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About This Dashboard</title>
+  <title>Scrolling Dashboard Info</title>
   <style>
     body {
       margin: 0;
@@ -11,90 +11,72 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2c2c2c);
+      background: black; /* black metallic background */
+      color: #00ff99; /* neon green text */
       font-family: Arial, sans-serif;
-      color: #e0e0e0;
       overflow: hidden;
     }
 
-    .banner {
-      width: 600px;
-      height: 200px;
+    .scroll-container {
+      height: 100%;
+      width: 80%;
       overflow: hidden;
       position: relative;
-      border-radius: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      box-shadow: 0 0 25px rgba(0, 255, 100, 0.5);
     }
 
-    .scrolling-text {
+    .scroll-text {
       position: absolute;
+      bottom: -100%;
       width: 100%;
-      animation: scrollUp 20s linear infinite;
+      text-align: center;
+      animation: scroll-up 20s linear infinite;
     }
 
-    @keyframes scrollUp {
-      0%   { top: 100%; }
-      100% { top: -100%; }
+    @keyframes scroll-up {
+      from {
+        bottom: -100%;
+      }
+      to {
+        bottom: 100%;
+      }
     }
 
     h2, h3 {
-      text-align: center;
       margin: 10px 0;
-      color: #6cff96;
+      color: #00ffcc;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: center;
+    a {
+      color: #00ffff;
+      text-decoration: none;
     }
 
-    li {
-      margin: 5px 0;
-    }
-
-    .vision {
-      margin-top: 15px;
-      font-style: italic;
-      color: #9ef7c2;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="banner">
-    <div class="scrolling-text">
+  <div class="scroll-container">
+    <div class="scroll-text">
       <h2>About This Dashboard</h2>
 
       <h3>Contributors</h3>
-      <ul>
-        <li>Kejal @rkejal</li>
-        <li>Sylwia @spisarcz</li>
-        <li>Sai Deepak @saizdeep</li>
-        <li>Gaurav @rathiga</li>
-      </ul>
+      <p>Kejal @rkejal, Sylwia @spisarcz, Sai Deepak @saizdeep, Gaurav @rathiga</p>
 
       <h3>Resources</h3>
-      <p><b>Data Sources:</b></p>
-      <ul>
-        <li>Source 1</li>
-        <li>Source 2</li>
-        <li>Source 3</li>
-      </ul>
+      <p>
+        Data Source:  
+        <a href="https://www.iea.org/reports/global-energy-review-2025/co2-emissions" target="_blank">
+          IEA Global Energy Review 2025 - CO₂ Emissions
+        </a>
+      </p>
 
-      <p><b>Tools Used:</b></p>
-      <ul>
-        <li>QuickSight</li>
-        <li>GitHub</li>
-        <li>SageMaker</li>
-        <li>Python</li>
-      </ul>
+      <h3>Tools Used</h3>
+      <p>QuickSight • GitHub • SageMaker • Python</p>
 
-      <h3 class="vision">
-        Vision & Purpose:<br>
-        VIZCON 2025 – A sustainable vision: reducing CO₂ in every last mile.
-      </h3>
+      <h3>Vision & Purpose</h3>
+      <p>A sustainable vision: reducing CO₂ in every last mile.</p>
     </div>
   </div>
 </body>
