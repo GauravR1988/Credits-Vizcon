@@ -1,109 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f0f0f0;
-        }
-        
-        .bubble {
-            position: relative;
-            border-radius: 50%;
-            margin: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .bubble-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.05); opacity: 0.9; }
-            100% { transform: scale(1); opacity: 0.7; }
-        }
-        
-        .info-panel {
-            display: none;
-            position: absolute;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            max-width: 300px;
-        }
-    </style>
+<style>
+.credits-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.scroll-content {
+    position: absolute;
+    width: 100%;
+    animation: scroll 20s linear infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes scroll {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+
+.credits-container:hover .scroll-content {
+    animation-play-state: paused;
+}
+
+.section-title {
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 15px;
+}
+
+.contributor {
+    margin: 5px 0;
+}
+
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="bubble" id="traffic" style="width: 150px; height: 150px; background: rgba(128,128,128,0.8);">
-            <div class="bubble-content">
-                <h3>Traffic</h3>
-                <p>30% CO₂</p>
-            </div>
-        </div>
+
+<div class="credits-container">
+    <div class="scroll-content">
+        <div class="section-title">About This Dashboard</div>
         
-        <div class="bubble" id="vehicle" style="width: 180px; height: 180px; background: rgba(128,128,128,0.9);">
-            <div class="bubble-content">
-                <h3>Vehicle</h3>
-                <p>59% CO₂</p>
-            </div>
-        </div>
+        <div class="section-title">Contributors</div>
+        <div class="contributor">Kejal (@******)</div>
+        <div class="contributor">Sylwia (@********)</div>
+        <div class="contributor">Sai Deepak (@********)</div>
+        <div class="contributor">Gaurav (@rathiga)</div>
         
-        <div class="bubble" id="weather" style="width: 130px; height: 130px; background: rgba(128,128,128,0.7);">
-            <div class="bubble-content">
-                <h3>Weather</h3>
-                <p>25% CO₂</p>
-            </div>
-        </div>
+        <div class="section-title">Resources</div>
+        <div class="section-title">Data Sources</div>
+        <div class="contributor">[Source 1]</div>
+        <div class="contributor">[Source 2]</div>
+        <div class="contributor">[Source 3]</div>
+        
+        <div class="section-title">Tools Used</div>
+        <div class="contributor">Amazon QuickSight</div>
+        <div class="contributor">GitHub</div>
+        <div class="contributor">SageMaker</div>
+        <div class="contributor">Python</div>
+        
+        <div class="section-title">Vision & Purpose</div>
+        <div class="contributor">This dashboard was created for VIZCON 2025 with a sustainable vision:</div>
+        <div class="contributor">Reducing CO₂ in every last mile and inspiring greener, cleaner deliveries.</div>
     </div>
+</div>
 
-    <div id="info-panel" class="info-panel"></div>
-
-    <script>
-        const bubbleData = {
-            traffic: {
-                title: "Traffic Impact",
-                details: "• Idle time increases fuel usage\n• Stop-and-go: +30% CO₂\n• Peak hours worsen impact"
-            },
-            vehicle: {
-                title: "Vehicle Impact",
-                details: "• Vans: 3-4x higher CO₂\n• Fleet composition crucial\n• EVs reduce emissions by 59%"
-            },
-            weather: {
-                title: "Weather Impact",
-                details: "• Extends delivery times\n• Increases fuel consumption\n• Adds 20-25% more CO₂"
-            }
-        };
-
-        const bubbles = document.querySelectorAll('.bubble');
-        const infoPanel = document.getElementById('info-panel');
-
-        bubbles.forEach(bubble => {
-            bubble.addEventListener('mouseover', (e) => {
-                const data = bubbleData[e.currentTarget.id];
-                infoPanel.innerHTML = `<h3>${data.title}</h3><p>${data.details}</p>`;
-                infoPanel.style.display = 'block';
-                infoPanel.style.left = e.pageX + 20 + 'px';
-                infoPanel.style.top = e.pageY + 'px';
-            });
-
-            bubble.addEventListener('mouseout', () => {
-                infoPanel.style.display = 'none';
-            });
-        });
-    </script>
 </body>
 </html>
